@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail Sales Data Analyzer — Output</title>
+<style>
+:root { color-scheme: light; --ink:#172033; --muted:#5b667a; --line:#e3e8ef; --blue:#3975d5; --bg:#f4f7fb; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 Arial, sans-serif; }
+header { background:#172033; color:white; padding:34px max(22px, calc((100% - 1100px)/2)); }
+header p { color:#d5deec; margin-bottom:0; }
+main { max-width:1100px; margin:24px auto; padding:0 18px 40px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; }
+.card, section { background:white; border:1px solid var(--line); border-radius:14px; padding:20px; margin-bottom:18px; box-shadow:0 4px 16px #1720330a; }
+.card span { display:block; color:var(--muted); font-size:14px; }
+.card strong { display:block; font-size:25px; margin-top:6px; }
+h1 { margin:0; font-size:clamp(26px,4vw,38px); }
+h2 { margin-top:0; font-size:21px; }
+.muted { color:var(--muted); }
+svg { width:100%; height:auto; overflow:visible; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th,td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); }
+th { background:#f7f9fc; }
+.table-wrap { overflow-x:auto; }
+footer { text-align:center; color:var(--muted); padding:20px; }
+@media (max-width:600px) { .card strong {font-size:21px} th,td {padding:7px} }
+</style>
+</head>
+<body>
+<header>
+  <h1>Retail Sales Data Analyzer</h1>
+  <p>Sample output report · Author: Dhruv Rao</p>
+</header>
+<main>
+  <p class="muted">This report is generated from the sample file <code>retail_sales.csv</code>. Running the Python program with a different dataset will produce different results.</p>
+  <div class="cards">
+    <div class="card"><span>Total sales</span><strong>₹30,400.00</strong></div>
+    <div class="card"><span>Average sale per record</span><strong>₹2,026.67</strong></div>
+    <div class="card"><span>Valid records</span><strong>15</strong></div>
+    <div class="card"><span>Most popular by units</span><strong>Pen</strong></div>
+  </div>
+  <section>
+    <h2>1. Sales by Category</h2>
+    <p class="muted">Total sales value grouped by product category.</p>
+    <svg viewBox="0 0 700 250" role="img" aria-label="Sales by category chart"><text x="140" y="62.5" text-anchor="end" font-size="13">Electronics</text><rect x="150" y="26.0" width="530.0" height="53.0" rx="4" fill="#3975d5"/><text x="687.0" y="62.5" font-size="12">₹15,000</text><text x="140" y="127.5" text-anchor="end" font-size="13">Accessories</text><rect x="150" y="91.0" width="445.2" height="53.0" rx="4" fill="#3975d5"/><text x="602.2" y="127.5" font-size="12">₹12,600</text><text x="140" y="192.5" text-anchor="end" font-size="13">Stationery</text><rect x="150" y="156.0" width="98.9" height="53.0" rx="4" fill="#3975d5"/><text x="255.9" y="192.5" font-size="12">₹2,800</text></svg>
+  </section>
+  <section>
+    <h2>2. Sales Trend Over Time</h2>
+    <p class="muted">Daily total sales from the sample dataset.</p>
+    <svg viewBox="0 0 800 270" role="img" aria-label="Daily sales line chart"><line x1="45" y1="20.0" x2="780" y2="20.0" stroke="#dbe2ea"/><line x1="45" y1="88.3" x2="780" y2="88.3" stroke="#dbe2ea"/><line x1="45" y1="156.7" x2="780" y2="156.7" stroke="#dbe2ea"/><line x1="45" y1="225.0" x2="780" y2="225.0" stroke="#dbe2ea"/><polyline points="45.0,212.9 97.5,225.0 150.0,140.6 202.5,121.3 255.0,200.9 307.5,121.3 360.0,140.6 412.5,222.6 465.0,92.4 517.5,20.0 570.0,188.8 622.5,63.4 675.0,116.5 727.5,159.9 780.0,63.4" fill="none" stroke="#3975d5" stroke-width="3"/><circle cx="45.0" cy="212.9" r="3.5" fill="#3975d5"/><circle cx="97.5" cy="225.0" r="3.5" fill="#3975d5"/><circle cx="150.0" cy="140.6" r="3.5" fill="#3975d5"/><circle cx="202.5" cy="121.3" r="3.5" fill="#3975d5"/><circle cx="255.0" cy="200.9" r="3.5" fill="#3975d5"/><circle cx="307.5" cy="121.3" r="3.5" fill="#3975d5"/><circle cx="360.0" cy="140.6" r="3.5" fill="#3975d5"/><circle cx="412.5" cy="222.6" r="3.5" fill="#3975d5"/><circle cx="465.0" cy="92.4" r="3.5" fill="#3975d5"/><circle cx="517.5" cy="20.0" r="3.5" fill="#3975d5"/><circle cx="570.0" cy="188.8" r="3.5" fill="#3975d5"/><circle cx="622.5" cy="63.4" r="3.5" fill="#3975d5"/><circle cx="675.0" cy="116.5" r="3.5" fill="#3975d5"/><circle cx="727.5" cy="159.9" r="3.5" fill="#3975d5"/><circle cx="780.0" cy="63.4" r="3.5" fill="#3975d5"/><text x="45.0" y="255" text-anchor="middle" font-size="11">Jan 01</text><text x="412.5" y="255" text-anchor="middle" font-size="11">Jan 08</text><text x="780.0" y="255" text-anchor="middle" font-size="11">Jan 15</text></svg>
+  </section>
+  <section>
+    <h2>3. Correlation Table</h2>
+    <p class="muted">Correlation values range from -1 to +1. They show relationships, not cause and effect.</p>
+    <div class="table-wrap"><table><thead><tr><th>Variable</th><th>Price</th><th>Quantity Sold</th><th>Total Sales</th></tr></thead><tbody><tr><th>Price</th><td>1.00</td><td>-0.79</td><td>0.79</td></tr><tr><th>Quantity Sold</th><td>-0.79</td><td>1.00</td><td>-0.72</td></tr><tr><th>Total Sales</th><td>0.79</td><td>-0.72</td><td>1.00</td></tr></tbody></table></div>
+  </section>
+  <section>
+    <h2>4. Dataset Preview</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Date</th><th>Product</th><th>Category</th><th>Price</th><th>Quantity Sold</th><th>Total Sales</th></tr></thead>
+      <tbody><tr><td>2026-01-01</td><td>Notebook</td><td>Stationery</td><td>₹50.00</td><td>10</td><td>₹500.00</td></tr><tr><td>2026-01-02</td><td>Pen</td><td>Stationery</td><td>₹10.00</td><td>25</td><td>₹250.00</td></tr><tr><td>2026-01-03</td><td>Mouse</td><td>Electronics</td><td>₹500.00</td><td>4</td><td>₹2,000.00</td></tr><tr><td>2026-01-04</td><td>Keyboard</td><td>Electronics</td><td>₹800.00</td><td>3</td><td>₹2,400.00</td></tr><tr><td>2026-01-05</td><td>Notebook</td><td>Stationery</td><td>₹50.00</td><td>15</td><td>₹750.00</td></tr><tr><td>2026-01-06</td><td>Headphones</td><td>Electronics</td><td>₹1,200.00</td><td>2</td><td>₹2,400.00</td></tr><tr><td>2026-01-07</td><td>Water Bottle</td><td>Accessories</td><td>₹250.00</td><td>8</td><td>₹2,000.00</td></tr><tr><td>2026-01-08</td><td>Pen</td><td>Stationery</td><td>₹10.00</td><td>30</td><td>₹300.00</td></tr><tr><td>2026-01-09</td><td>Mouse</td><td>Electronics</td><td>₹500.00</td><td>6</td><td>₹3,000.00</td></tr><tr><td>2026-01-10</td><td>Backpack</td><td>Accessories</td><td>₹900.00</td><td>5</td><td>₹4,500.00</td></tr><tr><td>2026-01-11</td><td>Notebook</td><td>Stationery</td><td>₹50.00</td><td>20</td><td>₹1,000.00</td></tr><tr><td>2026-01-12</td><td>Headphones</td><td>Electronics</td><td>₹1,200.00</td><td>3</td><td>₹3,600.00</td></tr><tr><td>2026-01-13</td><td>Water Bottle</td><td>Accessories</td><td>₹250.00</td><td>10</td><td>₹2,500.00</td></tr><tr><td>2026-01-14</td><td>Keyboard</td><td>Electronics</td><td>₹800.00</td><td>2</td><td>₹1,600.00</td></tr><tr><td>2026-01-15</td><td>Backpack</td><td>Accessories</td><td>₹900.00</td><td>4</td><td>₹3,600.00</td></tr></tbody>
+    </table></div>
+  </section>
+  <section>
+    <h2>5. Additional Metric</h2>
+    <p>Sales standard deviation: <strong>₹1,261.07</strong></p>
+    <p class="muted">The Python terminal program also supports filtering by category, product, date range, or minimum sale amount.</p>
+  </section>
+</main>
+<footer>Retail Sales Data Analyzer · Dhruv Rao</footer>
+</body>
+</html>
