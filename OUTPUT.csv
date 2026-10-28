@@ -1,0 +1,108 @@
+===== RETAIL SALES DATA ANALYZER =====
+1. Load CSV file
+2. Calculate sales metrics
+3. Filter sales data
+4. Display data summary
+5. Show charts
+6. Exit
+Choose an option (1-6): 1
+Enter CSV file path: retail_sales.csv
+Dataset loaded successfully.
+Valid rows: 5
+
+===== RETAIL SALES DATA ANALYZER =====
+1. Load CSV file
+2. Calculate sales metrics
+3. Filter sales data
+4. Display data summary
+5. Show charts
+6. Exit
+Choose an option (1-6): 2
+
+--- SALES METRICS ---
+Total sales: Rs. 232,000.00
+Average sale per record: Rs. 46,400.00
+Most popular product by units sold: Laptop
+Standard deviation: Rs. 32,965.44
+First-to-last record change: -50.00%
+
+===== RETAIL SALES DATA ANALYZER =====
+1. Load CSV file
+2. Calculate sales metrics
+3. Filter sales data
+4. Display data summary
+5. Show charts
+6. Exit
+Choose an option (1-6): 3
+
+1. Filter by category
+2. Filter by product
+3. Filter by date range
+4. Filter by minimum sale amount
+Choose filter (1-4): 1
+Enter category: Electronics
+
+      Date Product     Category  Price  Quantity Sold  Total Sales
+2026-01-01  Laptop  Electronics  50000              2       100000
+2026-01-02   Phone  Electronics  20000              3        60000
+2026-01-05  Laptop  Electronics  50000              1        50000
+
+Filtered total sales: Rs. 210,000.00
+
+===== RETAIL SALES DATA ANALYZER =====
+1. Load CSV file
+2. Calculate sales metrics
+3. Filter sales data
+4. Display data summary
+5. Show charts
+6. Exit
+Choose an option (1-6): 4
+
+--- DATASET SUMMARY ---
+Number of valid records: 5
+
+First five rows:
+      Date Product     Category  Price  Quantity Sold  Total Sales
+2026-01-01  Laptop  Electronics  50000              2       100000
+2026-01-02   Phone  Electronics  20000              3        60000
+2026-01-03   Chair    Furniture   3000              4        12000
+2026-01-04   Table    Furniture   5000              2        10000
+2026-01-05  Laptop  Electronics  50000              1        50000
+
+Missing values after cleaning:
+Date             0
+Product          0
+Category         0
+Price            0
+Quantity Sold    0
+Total Sales      0
+
+Sales by category:
+Category
+Electronics    210000
+Furniture       22000
+
+Sales by product:
+Product
+Chair      12000
+Laptop    150000
+Phone      60000
+Table      10000
+
+Sales by date:
+Date
+2026-01-01    100000
+2026-01-02     60000
+2026-01-03     12000
+2026-01-04     10000
+2026-01-05     50000
+Name: Total Sales, dtype: int64
+
+===== RETAIL SALES DATA ANALYZER =====
+1. Load CSV file
+2. Calculate sales metrics
+3. Filter sales data
+4. Display data summary
+5. Show charts
+6. Exit
+Choose an option (1-6): 5
